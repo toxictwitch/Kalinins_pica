@@ -22,6 +22,25 @@ public class Kalinins_pica {
 		
 		
 	}
+	static void StudentuPica(){
+		String[] margaritaVeidas = {"30cm - 9.00€", "40cm - 12.00€", "50cm - 15.00"};
+		 String MargaritasIzvele;
+		 MargaritasIzvele = (String) JOptionPane.showInputDialog(null, "izvelies izmeru!", "Margaritas izvele", JOptionPane.QUESTION_MESSAGE,
+				null, margaritaVeidas, margaritaVeidas[0] );
+		 switch(MargaritasIzvele){
+		 
+		 case "30cm - 9.00€":
+			 break;
+			 
+		 case "40cm - 12.00€":
+			 break;
+			 
+		 case "50cm - 15.00":
+			 break;
+			 
+		 }
+	}
+			 
 	
 	
 	
