@@ -22,7 +22,7 @@ public class Pica {
 	}
 		
 	public String Izdruka(){
-		String rez = nosaukums + "  " + diametrs + " cm - " + cena + " EUR" ;
+		String rez = this.nosaukums + "  " + this.diametrs + " cm - " + this.cena + " EUR" ;
 		return rez;
 	}
 
