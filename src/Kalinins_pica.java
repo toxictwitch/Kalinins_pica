@@ -16,36 +16,54 @@ public class Kalinins_pica {
 		
 		String izmers = (String) JOptionPane.showInputDialog(null, "Izvelies Picas izmçru!", "Izvçlies picu!",
 						JOptionPane.QUESTION_MESSAGE, null, picasIzmers, picasIzvele[1]);
-		int izm;
-		double cena;
-		switch(izmers){
-			case "20cm": izm=20; cena=8.0;  break;
-					
-			case "50cm": izm=50; cena=12.0; break;
-			default: izm=30; cena=10.0; 
-		}
-			
+		
+		
+		int izm = 0;
+		double cena = 0;
 		Pica jauna;
 		switch(izvele){
 			case "Pica Margarita":
-			
-				jauna = new Pica("Pica Margarita", 8.00, izm, true, true, false, false, false);
+				switch(izmers){
+				case "20cm": izm=20; cena=6.00;  break;		
+				case "30cm": izm=30; cena=8.00; break;	
+				case "50cm": izm=50; cena=10.00; 
+			}
+				jauna = new Pica("Pica Margarita", cena, izm, true, true, false, false, false);
 				picaList.add(jauna);
 				
 			break;
 					
 			case "Studentu":
-				jauna = new Pica("Studentu pica", 6.00, izm, true, true, true, false, true);
+				
+				switch(izmers){
+				case "20cm": izm=20; cena=8.0;  break;		
+				case "30cm": izm=30; cena=10.0; break;	
+				case "50cm": izm=50; cena=12.0; 	
+				
+			}
+				
+				jauna = new Pica("Studentu pica", cena, izm, true, true, true, false, true);
 				picaList.add(jauna);
 			break;
 					
 				case "Mafia":
-					jauna = new Pica("Mafia", 6.00, izm, true, true, true, false, true);
+					switch(izmers){
+					case "20cm": izm=20; cena=11.0;  break;		
+					case "30cm": izm=30; cena=13.0; break;	
+					case "50cm": izm=50; cena=15.0; 
+				}
+					jauna = new Pica("Mafia", cena, izm, true, true, true, false, true);
 					picaList.add(jauna);
 					break;
 					
 				case "Hawaian":
-					
+					switch(izmers){
+					case "20cm": izm=20; cena=10.0;  break;		
+					case "30cm": izm=30; cena=12.0; break;	
+					case "50cm": izm=50; cena=14.0; 
+				}
+					jauna = new Pica("Mafia", cena, izm, true, true, true, false, true);
+					picaList.add(jauna);
 					break;	
 					
 		}
