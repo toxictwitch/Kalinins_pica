@@ -74,14 +74,27 @@ public class Kalinins_pica {
 		String str = "";
 		
 		for(int i=0; i<picaList.size(); i++){
-			str+= picaList.get(i).getNos()+" "+picaList.get(i).getDiam()+" "+picaList.get(i).getCena()+"\n";
+			str+= picaList.get(i).getNos()+" "+picaList.get(i).getDiam()+"cm "+picaList.get(i).getCena()+"0€\n";
 		}
 		JOptionPane.showMessageDialog(null, str, "txt \n", JOptionPane.INFORMATION_MESSAGE);
 	}
 	
+	static void konts(){
+		Konts acc;
+		String name, sur, ad, tel;
+			name = (String) JOptionPane.showInputDialog(null, "Ievadi savu vardu.", "Vards", JOptionPane.QUESTION_MESSAGE);
+			sur = (String) JOptionPane.showInputDialog(null, "Ievadi savu uzvardu.", "Uzvards", JOptionPane.QUESTION_MESSAGE);
+			ad = (String) JOptionPane.showInputDialog(null, "Ievadi savu adresi.", "Adrese", JOptionPane.QUESTION_MESSAGE);
+			tel = (String) JOptionPane.showInputDialog(null, "Ievadi savu telefonu.", "Telefons", JOptionPane.QUESTION_MESSAGE);
+			
+			acc = new Konts(name, sur, ad, tel);
+		
+		
+	}
+	
 	public static void main(String[] args) {
 		boolean q=true;
-		String[] MainMenu = {"Igadadat picas", "jusu konts", "izveletas picas", "apturet programmu"};
+		String[] MainMenu = {"Pasutit picas", "Jusu konts", "Izveletas picas", "Apturet programmu"};
 		
 		
 		String MenuIzvele;
@@ -95,6 +108,7 @@ public class Kalinins_pica {
 			break;
 			
 			case "jusu konts":
+				konts();
 			break;
 		
 			case"izveletas picas":
