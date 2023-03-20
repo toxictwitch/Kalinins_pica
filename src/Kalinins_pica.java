@@ -6,6 +6,7 @@ public class Kalinins_pica {
 	
 	public static ArrayList<Pica> picaList = new ArrayList<Pica>();
 	
+	
 	static void JaunaPica(){
 		String[] picasIzvele = {"Pica Margarita", "Studentu pica", "Mafia", "Hawaian", "atpakal uz menu"};
 				
@@ -103,19 +104,19 @@ public class Kalinins_pica {
 					JOptionPane.QUESTION_MESSAGE, null, MainMenu, MainMenu[0]);
 				
 		switch(MenuIzvele){
-			case "Igadadat picas":
+			case "Pasutit picas":
 				JaunaPica();
 			break;
 			
-			case "jusu konts":
+			case "Jusu konts":
 				konts();
 			break;
 		
-			case"izveletas picas":
+			case"Izveletas picas":
 				VisasPicas();
 			break;
 		
-			case "apturet programmu":
+			case "Apturet programmu":
 				q=false;
 				break;
 		}
