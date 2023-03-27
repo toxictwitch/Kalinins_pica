@@ -7,6 +7,7 @@ public class Kalinins_pica {
 	public static ArrayList<Pica> picaList = new ArrayList<Pica>();
 	
 	
+	
 	static void JaunaPica(){
 		String[] picasIzvele = {"Pica Margarita", "Studentu pica", "Mafia", "Hawaian", "atpakal uz menu"};
 				
@@ -41,10 +42,10 @@ public class Kalinins_pica {
 				case "30cm": izm=30; cena=10.0; break;	
 				case "50cm": izm=50; cena=12.0; 	
 				
-			}
-				
-				jauna = new Pica("Studentu pica", cena, izm, true, true, true, false, true);
+				jauna = new Pica("Studentu pica", cena, izm, true, true, false, false, false);
 				picaList.add(jauna);
+			}
+			
 			break;
 					
 				case "Mafia":
@@ -81,14 +82,29 @@ public class Kalinins_pica {
 	}
 	
 	static void konts(){
-		Konts acc;
-		String name, sur, ad, tel;
+		
+		String name =" ";
+		String sur =" ";
+		String ad = " ";
+		String tel =" ";
+		String var;
+		String[] darbibas = {"Apskatit savu kontu", "izveidot kontu"};
+		var = (String) JOptionPane.showInputDialog(null,"izvelies opciju" ,"Konts", JOptionPane.QUESTION_MESSAGE,
+				null, darbibas, darbibas[0]);
+		
+		if(var.equals("izveidot kontu")){
 			name = (String) JOptionPane.showInputDialog(null, "Ievadi savu vardu.", "Vards", JOptionPane.QUESTION_MESSAGE);
-			sur = (String) JOptionPane.showInputDialog(null, "Ievadi savu uzvardu.", "Uzvards", JOptionPane.QUESTION_MESSAGE);
+			sur = (String) JOptionPane.showInputDialog(null, "Ievadi save uzvardu.", "Uzvards", JOptionPane.QUESTION_MESSAGE);
 			ad = (String) JOptionPane.showInputDialog(null, "Ievadi savu adresi.", "Adrese", JOptionPane.QUESTION_MESSAGE);
 			tel = (String) JOptionPane.showInputDialog(null, "Ievadi savu telefonu.", "Telefons", JOptionPane.QUESTION_MESSAGE);
 			
-			acc = new Konts(name, sur, ad, tel);
+			
+			
+		}else{
+			JOptionPane.showMessageDialog(null, "Jusu konts:\n"+name+"\n"+sur+"\n"+ad+"\n"+tel, "Konts", JOptionPane.INFORMATION_MESSAGE);
+		}
+		
+	
 		
 		
 	}
@@ -109,7 +125,7 @@ public class Kalinins_pica {
 			break;
 			
 			case "Jusu konts":
-				konts();
+			konts();
 			break;
 		
 			case"Izveletas picas":
