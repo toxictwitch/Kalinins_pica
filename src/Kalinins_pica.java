@@ -81,32 +81,29 @@ public class Kalinins_pica {
 		JOptionPane.showMessageDialog(null, str, "txt \n", JOptionPane.INFORMATION_MESSAGE);
 	}
 	
-	static void konts(){
-		
-		String name =" ";
-		String sur =" ";
-		String ad = " ";
-		String tel =" ";
-		String var;
-		String[] darbibas = {"Apskatit savu kontu", "izveidot kontu"};
-		var = (String) JOptionPane.showInputDialog(null,"izvelies opciju" ,"Konts", JOptionPane.QUESTION_MESSAGE,
-				null, darbibas, darbibas[0]);
-		
-		if(var.equals("izveidot kontu")){
-			name = (String) JOptionPane.showInputDialog(null, "Ievadi savu vardu.", "Vards", JOptionPane.QUESTION_MESSAGE);
-			sur = (String) JOptionPane.showInputDialog(null, "Ievadi save uzvardu.", "Uzvards", JOptionPane.QUESTION_MESSAGE);
-			ad = (String) JOptionPane.showInputDialog(null, "Ievadi savu adresi.", "Adrese", JOptionPane.QUESTION_MESSAGE);
-			tel = (String) JOptionPane.showInputDialog(null, "Ievadi savu telefonu.", "Telefons", JOptionPane.QUESTION_MESSAGE);
-			
-			
-			
-		}else{
-			JOptionPane.showMessageDialog(null, "Jusu konts:\n"+name+"\n"+sur+"\n"+ad+"\n"+tel, "Konts", JOptionPane.INFORMATION_MESSAGE);
-		}
-		
-	
-		
-		
+	static void konts() {
+	    Person person = new Person();
+	    String var;
+	    String[] darbibas = {"Apskatit savu kontu", "izveidot kontu"};
+	    var = (String) JOptionPane.showInputDialog(null,"izvelies opciju" ,"Konts", JOptionPane.QUESTION_MESSAGE,
+	            null, darbibas, darbibas[0]);
+	    if (var.equals("izveidot kontu")) {
+	       person.setName((String) JOptionPane.showInputDialog(
+	                null, "Ievadi savu vârdu", "Vârds", JOptionPane.QUESTION_MESSAGE));
+	        person.setSurname((String) JOptionPane.showInputDialog(
+	                null, "Ievadi savu uzvârdu", "Uzvârds", JOptionPane.QUESTION_MESSAGE));
+	        person.setAddress((String) JOptionPane.showInputDialog(
+	                null, "Ievadi savu adresi", "Adrese", JOptionPane.QUESTION_MESSAGE));
+	        person.setPhoneNumber((String) JOptionPane.showInputDialog(
+	                null, "Ievadi savu telefonu", "Telefons", JOptionPane.QUESTION_MESSAGE));
+	    }
+	    JOptionPane.showMessageDialog(null,
+	            "Jûsu konts:\n" +
+	                    "Vârds: " + person.getName() + "\n" +
+	                    "Uzvârds: " + person.getSurname() + "\n" +
+	                    "Adrese: " + person.getAddress() + "\n" +
+	                    "Telefons: " + person.getPhoneNumber(),
+	            "Konts", JOptionPane.INFORMATION_MESSAGE);
 	}
 	
 	public static void main(String[] args) {
